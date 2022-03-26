@@ -1,5 +1,13 @@
 @import '../../../styles/all';
 
+
+.divNFT {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
 .form {
   background: $c-white;
   border-radius: $radius-m;

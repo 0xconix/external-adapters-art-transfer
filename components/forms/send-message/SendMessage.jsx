@@ -5,6 +5,9 @@ import Promise from 'promise'
 
 import ERC721 from '../../../artifacts/contracts/ERC721.json'
 
+import styles from './SendMessage.module.scss'
+
+
 class SendMessage extends React.Component {
   constructor(props) {
     super(props)
@@ -107,9 +110,9 @@ class SendMessage extends React.Component {
       return <div>Loading...</div>
     } else {
       const NFTsDiv = this.state.NFTs.map((img) => {
-        return <img key={img} alt="" src={img} />
+        return <img  style={{padding: '10px', alignSelf: 'flex-start'}} key={img} alt="" src={img} />
       })
-      return <div>{NFTsDiv}</div>
+      return <div className={styles.divNFT}>{NFTsDiv}</div>
     }
   }
 }
