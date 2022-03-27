@@ -6,13 +6,13 @@
 
 Allow anyone who owns NFTs to transform them with Neural Art Transfer. This Proof Of Concept shows that it is possible to connect Chainlink external adapter with the Fuji Testnet. 
 
+For now, you can choose to transform any of your NFTs with a predefined style which comes from <a src="https://en.wikipedia.org/wiki/The_Starry_Night">The Starry Night</a> of Van Gogh. But our method can be improved and accept any styles that comes from an other NFT *(e.g: <a src="https://opensea.io/collection/divisions-by-michael-connolly">Divisions by Michael Connolly</a>)*.
 
 ### How to use it
-1. Connect your metamask wallet
-2. Select your NFT
-3. Choose a style
+1. Go to <a src="https://external-adapters-art-transfer-iyl1tqpff-nicopons96.vercel.app/">Avart Transfer</a>
+2. Connect your metamask wallet
+3. Select your NFT
 4. Mint your new NFT !
-
 
 ### The architecture
 
@@ -32,9 +32,11 @@ So our external adapter returns 2 parameters:
 
 Finally, our main smart contract will call the second one to mint the new generated image.
 
+**We hope that our project will help other developers to create and use their own external adapter with the avalanche exosystem.**
+
 ### What is neural style transfer ?
 
-Neural style transfer is the process of taking the style of one image *(in our case an NFT that is available in our wallet)* and then applying it to the content of another image.
+Neural style transfer is the process of taking the style of one image and then applying it to the content of another image *(in our case an NFT that is available in our wallet)*.
 
 <img src="./resources/schema.png" />
 
@@ -47,5 +49,5 @@ Our neural network uses pretrained weights but can be easily retrained with a ne
 ### Todo
 - [x] Display the owned NFTs when a wallet is connected
 - [x] Mint the generated NFT
-- [ ] Add new styles
+- [ ] Add new styles that come from existing NFT collections
 - [ ] Improve documentation to make it easier to people to create external adapter on Avalanche
