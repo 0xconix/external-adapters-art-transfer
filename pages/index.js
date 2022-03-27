@@ -4,8 +4,7 @@ import HomeView from '../views/home/HomeView'
 export default function Home() {
   return (
     <Layout
-      pageTitle="Home | Avaxbox"
-      pageDescription="Send messages on Avalanche"
+      pageTitle="Avart Transfert"
     >
       <HomeView />
     </Layout>

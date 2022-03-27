@@ -46,8 +46,8 @@ export default function HomeView() {
 
   return (
     <div className={styles.home}>
-      <h2>Welcome to Avaxbox</h2>
-      <p>A decentralised way of sending messages on the Avalanche network</p>
+      <h2>Welcome  to Avart Transfert ☀️</h2>
+      <p>DESCRIPTION !!!</p>
       <SendMessage />
     </div>
   )

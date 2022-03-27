@@ -7,7 +7,7 @@ export default function compressAddress(address) {
 
   compressedAddress += '...'
 
-  for (let i = address.length - 1; i > address.length - 6; i -= 1) {
+  for (let i = address.length - 4; i < address.length; i += 1) {
     compressedAddress += address[i]
   }
 

@@ -6,7 +6,7 @@ async function deploy() {
   console.log('Deploying contract with the account:', deployer.address)
 
   // Create an instance of the contract by providing the name
-  const ContractSource = await hre.ethers.getContractFactory('Avaxbox')
+  const ContractSource = await hre.ethers.getContractFactory('APIConsumer.sol')
   // The deployed instance of the contract
   const deployedContract = await ContractSource.deploy()
 

@@ -18,15 +18,20 @@ export default function Header() {
     ? compressAddress(authState.data[0])
     : 'Connect Wallet'
 
+
+  const getNFT = isConnected
+    ? 'Mint 1 NFT 🔺' 
+    : '🔺'
+
   return (
     <div className={styles.header}>
       <Link href="/">
-        <a className={styles.headerTitle}>Avaxbox</a>
+        <a className={styles.headerTitle}>Avart Transfert</a>
       </Link>
 
       <div className={styles.headerButtons}>
         <Link href="/messages">
-          <a className={styles.headerLink}>My messages</a>
+          <a className={styles.headerLink}>{getNFT}</a>
         </Link>
 
         <Button
