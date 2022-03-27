@@ -50,7 +50,7 @@ class SendMessage extends React.Component {
     })
   }
 
-  mint = (url) => {
+  mint(url) {
     let provider = new ethers.providers.Web3Provider(window.ethereum)
     let signer = provider.getSigner()
     
