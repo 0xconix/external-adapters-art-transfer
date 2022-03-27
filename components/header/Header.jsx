@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Link from 'next/link'
 
 import Button from '../button/Button'
@@ -34,7 +35,7 @@ export default function Header() {
     ? compressAddress(authState.data[0])
     : 'Connect Wallet'
 
-  const getNFT = isConnected ? 'Mint 1 NFT 🔺' : '🔺'
+  const getNFT = isConnected ? 'Mint 1 NFT 🔺' : ''
 
   return (
     <div className={styles.header}>
