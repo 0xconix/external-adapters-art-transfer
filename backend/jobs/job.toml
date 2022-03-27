@@ -1,0 +1,39 @@
+type = "directrequest"
+schemaVersion = 1
+name = "test-bridged"
+contractAddress = "0xBA875f69d7e7773eD05bd11C75b3Fe9Bfbb5E197"
+maxTaskDuration = "0s"
+observationSource = """
+
+decode_log  [type="ethabidecodelog"
+abi="OracleRequest(bytes32 indexed specId, address requester, bytes32 requestId, uint256 payment, address callbackAddr, bytes4 callbackFunctionId, uint256 cancelExpiration, uint256 dataVersion, bytes data)"
+data="$(jobRun.logData)"
+topics="$(jobRun.logTopics)"]
+
+decode_cbor  [type="cborparse" data="$(decode_log.data)"]
+fetch        [type="bridge" name="testbridge" requestData="{\\"id\\":$(jobSpec.externalJobID), \\"data\\": {\\"url\\":$(decode_cbor.url)}}"]
+
+decode_log -> decode_cbor -> fetch
+
+
+parse_filter  [type="jsonparse" path="data,filter" data="$(fetch)"]
+parse_url   [type="jsonparse" path="data,link" data="$(fetch)"]
+
+fetch -> parse_filter
+fetch -> parse_url
+
+parse_filter-> encode_data
+parse_url -> encode_data
+
+
+encode_data  [type="ethabiencode" abi="(bytes32 requestId, bytes filter, bytes url)" data="{ \\"requestId\\" : $(decode_log.requestId), \\"filter\\": $(parse_filter), \\"url\\": $(parse_url) }"]
+
+
+encode_tx    [type="ethabiencode" abi="fulfillOracleRequest2(bytes32 requestId, uint256 payment, address callbackAddress, bytes4 callbackFunctionId, uint256 expiration, bytes calldata data)" data="{\\"requestId\\": $(decode_log.requestId), \\"payment\\": $(decode_log.payment), \\"callbackAddress\\": $(decode_log.callbackAddr), \\"callbackFunctionId\\": $(decode_log.callbackFunctionId), \\"expiration\\": $(decode_log.cancelExpiration), \\"data\\": $(encode_data)}" ]
+              
+submit_tx    [type="ethtx" to="0xBA875f69d7e7773eD05bd11C75b3Fe9Bfbb5E197" data="$(encode_tx)"]
+
+encode_data -> encode_tx -> submit_tx
+"""
+externalJobID = "4c932108-df32-4530-8861-6ba8e70c45d0"
+
