@@ -34,7 +34,7 @@ So our external adapter returns 2 parameters:
 
 Finally, our main smart contract will call the second one to mint the new generated image.
 
-**We hope that our project will help other developers to create and use their own external adapter with the avalanche exosystem.**
+**We hope that our project will help other developers to create and use their own external adapter within the avalanche ecosystem.**
 
 ### What is neural style transfer ?
 
