@@ -6,41 +6,9 @@ This template provides a basic framework for developing Chainlink external adapt
 
 Clone this repo and change "ExternalAdapterProject" below to the name of your project
 
-```bash
-git clone https://github.com/thodges-gh/CL-EA-NodeJS-Template.git ExternalAdapterProject
-```
 
-Enter into the newly-created directory
-
-```bash
-cd ExternalAdapterProject
-```
-
-You can remove the existing git history by running:
-
-```bash
-rm -rf .git
-```
 
 See [Install Locally](#install-locally) for a quickstart
-
-## Input Params
-
-- `base`, `from`, or `coin`: The symbol of the currency to query
-- `quote`, `to`, or `market`: The symbol of the currency to convert to
-
-## Output
-
-```json
-{
- "jobRunID": "278c97ffadb54a5bbb93cfec5f7b5503",
- "data": {
-  "USD": 164.02,
-  "result": 164.02
- },
- "statusCode": 200
-}
-```
 
 ## Install Locally
 
@@ -69,7 +37,7 @@ yarn start
 ## Call the external adapter/API server
 
 ```bash
-curl -X POST -H "content-type:application/json" "http://localhost:8080/" --data '{ "id": 0, "data": { "from": "ETH", "to": "USD" } }'
+curl -X POST -H "content-type:application/json" "http://localhost:8080/" --data '{ "id": 0, "data": { "url": "www.img.png" } }'
 ```
 
 ## Docker
@@ -85,11 +53,6 @@ Then run it with:
 ```bash
 docker run -p 8080:8080 -it external-adapter:latest
 ```
-
-## Serverless hosts
-
-After [installing locally](#install-locally):
-
 ### Create the zip
 
 ```bash
