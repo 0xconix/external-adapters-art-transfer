@@ -28,7 +28,7 @@ class SendMessage extends React.Component {
   //authState, connectWallet = useAuthContext()
 
 
-  getAddress = () => {
+  getAddress() {
     let provider = new ethers.providers.Web3Provider(window.ethereum)
     let signer = provider.getSigner()
     signer.getAddress().then(succ => {

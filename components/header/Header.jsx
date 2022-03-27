@@ -18,10 +18,7 @@ export default function Header() {
     ? compressAddress(authState.data[0])
     : 'Connect Wallet'
 
-
-  const getNFT = isConnected
-    ? 'Mint 1 NFT 🔺' 
-    : '🔺'
+  const getNFT = isConnected? 'Mint 1 NFT 🔺' : '🔺'
 
   return (
     <div className={styles.header}>

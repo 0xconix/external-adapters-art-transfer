@@ -3,9 +3,7 @@ import HomeView from '../views/home/HomeView'
 
 export default function Home() {
   return (
-    <Layout
-      pageTitle="Avart Transfert"
-    >
+    <Layout pageTitle="Avart Transfert">
       <HomeView />
     </Layout>
   )
