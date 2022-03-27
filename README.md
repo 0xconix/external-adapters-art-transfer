@@ -2,7 +2,12 @@
 
 <img src="./resources/schema.png" />
 
-## <a href="https://external-adapters-art-transfer-iyl1tqpff-nicopons96.vercel.app/">Demo</a>
+## Links
+#### <a href="https://external-adapters-art-transfer-iyl1tqpff-nicopons96.vercel.app/">Website</a>
+
+#### <a href="https://youtu.be/JmNFJfhnA2s">Live demo</a>
+
+<iframe width="512" height="256" src="https://www.youtube.com/embed/JmNFJfhnA2s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## The Project
 
