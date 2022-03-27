@@ -33,7 +33,7 @@ class SendMessage extends React.Component {
     let provider = new ethers.providers.Web3Provider(window.ethereum)
     let signer = provider.getSigner()
     signer.getAddress().then(succ => {
-      this.setState({address: "0x47A9A6856661360855c92b57660981DEe591C2eC"})
+      this.setState({address: succ})
     }).catch(err => {
       console.log(err)
     })
@@ -64,8 +64,8 @@ class SendMessage extends React.Component {
   extractContractAndTokenID() {
     let totalNFT = 0
     const hashmap = {}
-    //let address = this.state.address//'0x47A9A6856661360855c92b57660981DEe591C2eC'
-    let address = '0x47A9A6856661360855c92b57660981DEe591C2eC'
+    let address = this.state.address//'0x47A9A6856661360855c92b57660981DEe591C2eC'
+    //let address = '0x47A9A6856661360855c92b57660981DEe591C2eC'
 
     return new Promise((resolve) => {
       axios
