@@ -7,7 +7,7 @@
 
 #### <a href="https://youtu.be/JmNFJfhnA2s">Live demo</a>
 
-<iframe width="512" height="256" src="https://www.youtube.com/embed/JmNFJfhnA2s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Live demo](https://res.cloudinary.com/marcomontalbano/image/upload/v1648379208/video_to_markdown/images/youtube--JmNFJfhnA2s-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=JmNFJfhnA2s&ab_channel=ZinedineNull "Live demo")
 
 ## The Project
 
