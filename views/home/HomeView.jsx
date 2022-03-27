@@ -47,7 +47,8 @@ export default function HomeView() {
   return (
     <div className={styles.home}>
       <h2>Welcome  to Avart Transfert ☀️</h2>
-      <p>DESCRIPTION !!!</p>
+      <p>Here is your personal gallery of nft on the Fuji Testnet!
+You can click on one of them to create a new nft with Van Gogh's style.</p>
       <SendMessage />
     </div>
   )
