@@ -2,6 +2,8 @@
 
 <img src="./resources/schema.png" />
 
+## <a href="https://external-adapters-art-transfer-iyl1tqpff-nicopons96.vercel.app/">Demo</a>
+
 ## The Project
 
 Allow anyone who owns NFTs to transform them with Neural Art Transfer. This Proof Of Concept shows that it is possible to connect Chainlink external adapter with the Fuji Testnet. 
@@ -9,7 +11,7 @@ Allow anyone who owns NFTs to transform them with Neural Art Transfer. This Proo
 For now, you can choose to transform any of your NFTs with a predefined style which comes from <a src="https://en.wikipedia.org/wiki/The_Starry_Night">The Starry Night</a> of Van Gogh. But our method can be improved and accept any styles that comes from an other NFT *(e.g: <a src="https://opensea.io/collection/divisions-by-michael-connolly">Divisions by Michael Connolly</a>)*.
 
 ### How to use it
-1. Go to <a src="https://external-adapters-art-transfer-iyl1tqpff-nicopons96.vercel.app/">Avart Transfer</a>
+1. Go to <a href="https://external-adapters-art-transfer-iyl1tqpff-nicopons96.vercel.app/">Avart Transfer</a>
 2. Connect your metamask wallet
 3. Select your NFT
 4. Mint your new NFT !
